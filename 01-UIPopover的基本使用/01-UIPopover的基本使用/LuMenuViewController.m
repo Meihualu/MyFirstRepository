@@ -18,7 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"菜单";
-    self.titles = @[@"设置",@"清除缓存",@"退出"];
+    self.titles = @[@"设置",@"清除缓存",@"退出",@"基本信息"];
+    self.preferredContentSize =CGSizeMake(320, self.titles.count*44);
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

@@ -29,14 +29,14 @@
 - (IBAction)popMenu:(id)sender {
     
     //0.创建内容控制器
-    LuMenuViewController * menu = [[LuMenuViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    LuMenuViewController * menu = [[LuMenuViewController alloc] init];
     //1.创建一个popover
     UIPopoverController * pop = [[UIPopoverController alloc] initWithContentViewController:[[UINavigationController alloc] initWithRootViewController:menu]];
     self.pop = pop;
     //2.确定内容
 //    pop.contentViewController = [[LuMenuViewController alloc] init];
     //3.设置尺寸
-    pop.popoverContentSize = CGSizeMake(320, 300);
+    pop.popoverContentSize = CGSizeMake(320, 44*4);
     //4.从哪里显示出来
     [pop presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 }
